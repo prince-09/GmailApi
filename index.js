@@ -94,6 +94,7 @@ function listLabels(auth) {
     }
   });
 
+  // Making email body
   const makeBody = (params) => {
     params.subject = new Buffer.from(params.subject).toString("base64");
     const str = [
@@ -108,12 +109,14 @@ function listLabels(auth) {
     return new Buffer.from(str).toString('base64').replace(/\+/g,'-').replace(/\//g,'_');
 }
 
+
+// Drafting your message
 const messageBody = `
   this is a test message
   `;
 
   const raw = makeBody({
-      to : 'bezosjhef@gmail.com',
+      to : 'bezosjhef@gmail.com', //recepients email Id
       from : 'princesinha7072@gmail.com',
       subject : 'test title',
       message:messageBody
