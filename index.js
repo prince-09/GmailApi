@@ -2,6 +2,10 @@ const fs = require('fs');
 const readline = require('readline');
 const {google} = require('googleapis');
 
+/***
+ * Run this with command node . and copy the code from the URL and paste it in the terminal.
+ */
+
 // If modifying these scopes, delete token.json.
 const SCOPES = ['https://www.googleapis.com/auth/gmail.readonly','https://www.googleapis.com/auth/gmail.send'];
 // The file token.json stores the user's access and refresh tokens, and is
